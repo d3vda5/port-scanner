@@ -18,3 +18,6 @@ print("scanning started at: " + str(datetime.now()))
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.setdefaulttimeout(1)
 result = s.connect_ex((target,port))
+if result == 0:
+    print(f"Port {port} is open")
+s.close
