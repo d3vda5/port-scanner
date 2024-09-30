@@ -1,7 +1,7 @@
 import pyfiglet
 import sys
 import socket
-import datetime 
+from datetime import datetime
 
 banner = pyfiglet.figlet_format("PORT SCANNER")
 print (banner)
@@ -21,3 +21,5 @@ result = s.connect_ex((target,port))
 if result == 0:
     print(f"Port {port} is open")
 s.close
+
+print("scanning ended at: " + str(datetime.now()))
