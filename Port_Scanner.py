@@ -11,15 +11,17 @@ if len(sys.argv)==2:
 else:
     print("Invalid amount of argument, you have to enter the IP")
 
-port = int(input("\n Enter the port number you want to scan: "))
+print("-"*50)
 print("Scanning Target: " + target)
 print("scanning started at: " + str(datetime.now()))
+print("-"*50)
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-socket.setdefaulttimeout(1)
-result = s.connect_ex((target,port))
-if result == 0:
-    print(f"Port {port} is open")
-s.close
+for port in range(1, 1024):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    socket.setdefaulttimeout(1)
+    result = s.connect_ex((target,port))
+    if result == 0:
+        print(f"Port {port} is open")
+    s.close
 
 print("scanning ended at: " + str(datetime.now()))
