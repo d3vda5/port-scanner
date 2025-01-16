@@ -76,7 +76,6 @@ Total Scanning time: 15 seconds
 * Enable multi-threaded scanning for faster results.
 * Enhance the output format for better readability.
 * Include advanced features like service detection and protocol analysis.
-## License
-This project is licensed under the (MIT License)[License.txt]. Feel free to use, modify, and distribute as per the terms of the license.
 
-**Disclaimer**: This tool is intended for educational purposes only. Ensure you have proper authorization before scanning any target.
+## Disclaimer:
+This tool is intended for educational purposes only. Ensure you have proper authorization before scanning any target.
